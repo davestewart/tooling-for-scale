@@ -6,6 +6,7 @@ const api = axios.create({
 
 const action = 'GET /posts/:id'
 
+// wrap previous functionality in easy-to-call function
 function request (action, params) {
   // method and path
   const [, method, path] = action

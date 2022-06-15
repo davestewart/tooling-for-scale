@@ -6,15 +6,9 @@
     "baseUrl": "src",
     "paths": {
       "@/*": ["/*"],
-      "@packages/*": ["../packages/*"],
-      "@classes/*": ["classes/*"],
-      "@app/*": ["app/*"],
-      "@data/*": ["app/data/*"],
-      "@services/*": [
-        "app/services/*",
-        "../packages/services/*"
-      ],
-      "@views/*": ["app/views/*"]
+      "@foo/*": ["../foo/*"],
+      "@bar/*": ["path/to/bar/*"],
+      "@baz/*": ["a/really/log/path/to/baz/*"]
     }
   }
 }

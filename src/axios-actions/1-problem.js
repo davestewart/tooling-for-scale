@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+// vuex store has api paths spread out over multiple actions
 export default {
   state () {
     return {

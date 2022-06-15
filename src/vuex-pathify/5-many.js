@@ -19,6 +19,7 @@ function syncOne (path) {
   }
 }
 
+// flexible sync function which can handle one or more properties
 function sync (input) {
   if (typeof input === 'string') {
     return syncOne(input)
@@ -28,6 +29,8 @@ function sync (input) {
     return output
   }, {})
 }
+
+// multiple property implementation
 export default {
   computed: sync({
     user: 'users/current',

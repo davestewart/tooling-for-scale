@@ -1,5 +1,6 @@
 import Vue from 'vue'
 
+// vue model encapsulates state and getters
 const model = new Vue({
   data () {
     return {

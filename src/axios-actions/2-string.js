@@ -6,9 +6,11 @@ const api = axios.create({
 
 const action = 'GET /todos'
 
+// simple regex match to get method and path
 const [, method, url] = action
   .match(/(get|post|patch|delete) (.+)/i)
 
+// make a request
 const data = await api
   .request({ method, url })
   .then(res => res.data)

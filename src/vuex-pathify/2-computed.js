@@ -1,3 +1,4 @@
+// get/set computed to centralise functionality
 export default {
   computed: {
     user: {

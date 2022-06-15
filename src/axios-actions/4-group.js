@@ -4,7 +4,6 @@ const api = axios.create({
   baseURL: 'https://jsonplaceholder.typicode.com/'
 })
 
-// single request
 function request (action, params) {
   const [, method, path] = action
     .match(/(get|post) (.+)/i)
@@ -17,7 +16,7 @@ function request (action, params) {
     .then(res => res.data)
 }
 
-// multiple requests
+// wrap multiple endpoints in dictionary
 function create (api, actions) {
   return Object.keys(actions).reduce((endpoints, key) => {
     const action = actions[key]
@@ -26,13 +25,14 @@ function create (api, actions) {
   }, {})
 }
 
-// make endpoints
+// create single object of endpoints
 const todos = create (api, {
   all: 'GET /todos',
   one: 'GET /todos/:id',
   create: 'POST /todos',
 })
 
-const data = await todos.all({ id: 3 })
+const all = await todos.all()
+const third = await todos.one({ id: 3 })
 
-console.log(data)
+console.log({ all, third })

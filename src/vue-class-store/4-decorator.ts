@@ -26,6 +26,7 @@ function makeOptions (model: R) {
   }
 }
 
+// decorator function to abstract conversion of class to store
 function Store<T extends C> (constructor: T): T {
   function construct (...args: any[]) {
     const instance = new (constructor as any)(...args)
